@@ -34,9 +34,6 @@ function App() {
     <Route path="/Number6">
     <Number6/>
     </Route>
-    <Route path="/">
-        <Redirect to="/Main" />
-    </Route>
     </Switch>
   </BrowserRouter>
   );
