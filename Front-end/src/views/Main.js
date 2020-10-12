@@ -1,14 +1,41 @@
-import React from 'react'
+import React from "react";
+import "../App.css";
+import { useNavigate } from "react-router-dom";
 
-export default function main() {
-    return (
-        <div>
-            <a href="/Number1">บทที่ 1</a>
-            <a href="/Number2">บทที่ 2</a>
-            <a href="/Number3">บทที่ 3</a>
-            <a href="/Number4">บทที่ 4</a>
-            <a href="/Number5">บทที่ 5</a>
-            <a href="/Number6">บทที่ 6</a>
-        </div>
-    )
+
+function Main() {
+  const navigate = useNavigate();
+
+  const nextPage = (page) => {
+    navigate("/"+page);
+  }
+  return (
+    <div>
+        <button onClick={()=>{nextPage("Number1")}}>
+            <h3>Number 1</h3>
+        </button>
+        <br/>
+        <button onClick={()=>{nextPage("Number2")}} >
+            <h3>Number 2</h3>
+        </button>
+        <br/>
+        <button onClick={()=>{nextPage("Number3")}} >
+            <h3>Number 3</h3>
+        </button>
+        <br/>
+        <button onClick={()=>{nextPage("Number4")}} >
+            <h3>Number 4</h3>
+        </button>
+        <br/>
+        <button onClick={()=>{nextPage("Number5")}} >
+            <h3>Number 5</h3>
+        </button>
+        <br/>
+        <button onClick={()=>{nextPage("Number6")}} >
+            <h3>Number 6</h3>
+        </button>
+    </div>
+  );
 }
+
+export default Main;
